@@ -2,7 +2,7 @@
 // @name         OSM GMaps Button
 // @namespace    https://github.com/marvk/osm-gmaps-button
 // @version      1.0.0
-// @description  try to take over the world!
+// @description  Adds a GMaps button to OSM
 // @author       marvk
 // @match        https://www.openstreetmap.org/
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=openstreetmap.org
@@ -26,17 +26,17 @@ function findButtonGroup() {
 }
 
 function createGoogleMapsButton() {
-    const newButton = document.createElement('a');
+    const button = document.createElement('a');
 
-    newButton.classList.add('btn-outline-primary');
-    newButton.classList.add('btn');
-    newButton.textContent = 'GMaps';
-    newButton.onclick = () => {
+    button.classList.add('btn-outline-primary');
+    button.classList.add('btn');
+    button.textContent = 'GMaps';
+    button.onclick = () => {
         const split = getFragment('map').split('/');
         openGoogleMapsLink(split[1], split[2], split[0]);
     };
 
-    return newButton;
+    return button;
 }
 
 findButtonGroup().appendChild(createGoogleMapsButton());
