@@ -20,9 +20,7 @@ function openGoogleMapsLink(lat, lon, zoom) {
 
 function findButtonGroup() {
     return document
-        .getElementsByTagName('header')[0]
-        .getElementsByClassName('primary')[0]
-        .getElementsByClassName('btn-group')[0];
+        .getElementById('edit_tab');
 }
 
 function createGoogleMapsButton() {
@@ -39,4 +37,6 @@ function createGoogleMapsButton() {
     return button;
 }
 
-findButtonGroup().appendChild(createGoogleMapsButton());
+let bg = findButtonGroup();
+
+bg.insertBefore(createGoogleMapsButton(), bg.children[0]);
