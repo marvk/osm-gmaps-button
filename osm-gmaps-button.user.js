@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         OSM GMaps Button
 // @namespace    https://github.com/marvk/osm-gmaps-button
-// @version      1.0.0
+// @version      1.0.1
 // @description  Adds a GMaps button to OSM
 // @author       marvk
 // @match        https://www.openstreetmap.org/
